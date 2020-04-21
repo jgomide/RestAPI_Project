@@ -47,7 +47,7 @@ namespace RestAPI_Project
             }
             else
             {
-                app.UseHsts();
+                app.UseHsts(); 
             }
 
             var swaggerOptions = new SwaggerOptions();
