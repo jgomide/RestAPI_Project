@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestAPI_Project.Domain
+namespace RestAPI_Project.Contract.V1.Requests
 {
-    public class Post
+    public class CreatePostRequest
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

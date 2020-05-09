@@ -12,8 +12,14 @@ namespace RestAPI_Project.Contract
         public static class Posts
         {
             public const string GetAll = Base +  "/posts";
+
+            public const string Get = Base + "/post/{postId}";
+
+            public const string Create = Base + "/create";
+
+            public const string Update = Base + "/update/{postId}";
+
+            public const string Delete = Base + "/delete/{postId}";
         }
-
-
     }
 }
