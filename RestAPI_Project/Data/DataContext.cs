@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using RestAPI_Project.Domain;
 
 namespace RestAPI_Project.Data
 {
@@ -12,5 +13,9 @@ namespace RestAPI_Project.Data
             : base(options)
         {
         }
+        
+        public DbSet<Post> Posts { get; set; }
+
     }
+
 }
