@@ -14,7 +14,7 @@ namespace RestAPI_Project.Installers
     public class DbInstaller : IInstaller
     {
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
-        {
+        {   
             services.AddDbContext<DataContext>(options =>
                 options.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection")));
@@ -22,6 +22,8 @@ namespace RestAPI_Project.Installers
                 .AddEntityFrameworkStores<DataContext>();
 
             services.AddScoped<IPostService, PostService>();
+            //services.AddSingleton<IPostService, CosmosPostService>();
         }
     }
 }
+    
