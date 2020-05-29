@@ -2,8 +2,9 @@
 using RestAPI_Project.Contract;
 using RestAPI_Project.Domain;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using RestAPI_Project.Contract.V1.Requests;
 using RestAPI_Project.Contract.V1.Responses;
 using RestAPI_Project.Services;
@@ -11,6 +12,7 @@ using RestAPI_Project.Services;
 
 namespace RestAPI_Project.Controllers
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PostsControllers : Controller
     {
         private readonly IPostService _postService;
