@@ -66,5 +66,10 @@ namespace RestAPI_Project.Services
             var response = await _cosmosStore.RemoveByIdAsync(postId.ToString(), postId.ToString());
             return response.IsSuccess;
         }
+
+        public Task<bool> UserOwnsPostAsync(Guid postId, string userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

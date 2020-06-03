@@ -15,7 +15,6 @@ namespace RestAPI_Project.Data
         }
         
         public DbSet<Post> Posts { get; set; }
-
     }
 
 }

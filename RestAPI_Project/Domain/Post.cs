@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace RestAPI_Project.Domain
 {
@@ -11,5 +10,10 @@ namespace RestAPI_Project.Domain
         [Key]
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public string UserId { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        public IdentityUser User { get; set; }
     }
+
 }

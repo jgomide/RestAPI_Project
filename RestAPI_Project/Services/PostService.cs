@@ -53,5 +53,25 @@ namespace RestAPI_Project.Services
             var deleted = await _dataContext.SaveChangesAsync();
             return deleted > 0;
         }
+
+        public async Task<bool> UserOwnsPostAsync(Guid postId, string userId)
+        {
+            //var post = _dataContext.Posts.AsNoTracking().SingleOrDefaultAsync(x=> x.Id == postId);
+
+            var post = await _dataContext.Posts.AsNoTracking().SingleOrDefaultAsync(x => x.Id == postId);
+
+
+            if (post == null)
+            {
+                return false;
+            }
+
+            if (post.UserId != userId)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }
