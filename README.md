@@ -4,8 +4,10 @@ A basic REST API Project to improve my knowloge on C# / .NET Core.
 
 This API implements a version control, use of Swagger and JWT.
 
+```bash
 * Swagger  https://swagger.io/about/
 * JWT https://jwt.io/
+```
 
 ## Installation
 
