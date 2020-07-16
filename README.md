@@ -9,7 +9,7 @@ This API implements a version control, use of Swagger and JWT.
 
 ## Installation
 
-Use close or download the project and run with 'dotnet run'
+Clone or download the project and run with 'dotnet run' and find the Swagger interface on https://localhost:5001/swagger/index.html
 
 ## Usage
 
